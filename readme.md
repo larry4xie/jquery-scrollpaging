@@ -1,5 +1,13 @@
-请求方式：post\get
-参数
+# generate dist
+```shell
+npm install
+grunt
+```
+# other
+请求方式：get
+参数：style
+    classic: url?page=pagenum
+    rest: url/pagenum
 
 内部状态：
     最多主动触发多少次
