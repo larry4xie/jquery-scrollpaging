@@ -42,7 +42,7 @@
                 var _this = this;
                 $.ajax({
                     url: this.buildRequestUrl(),
-                    dataType: 'json',
+                    dataType: this.dataType,
                     success: function (data, textStatus, jqXHR) {
                         _this.page += 1;
                         _this.activeNum += 1;
@@ -119,6 +119,7 @@
     $.fn.scrollpaging.defaults = {
         url: "",
         // 第一次触发加载时请求的分页页码
+        dataType: "json",
         start: 2,
         // 主动触发次数
         active: 10,
