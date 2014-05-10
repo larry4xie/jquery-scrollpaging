@@ -98,7 +98,7 @@
                url = url.charAt(this.url.length - 1) === '/' ? url : url + '/';
             } else {
                 // classic
-                url = url.indexOf('?') >= 0 ? url + '&page=' : url + '?page=';
+                url = url.indexOf('?') >= 0 ? url + '&' + this.pageParamName + '=' : url + '?' + this.pageParamName + '=';
             }
             return url + this.page;
         }
@@ -135,6 +135,8 @@
             element: "<a class=\"more\" href=\"javascript:;\"></a>",
             content: "更多"
         },
+        //分页参数名
+        pageParamName: "page",
         // event
         onLoading: ScrollPaging.prototype.onLoading,
         onUpdate: function(){},
