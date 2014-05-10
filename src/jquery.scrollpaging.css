@@ -1,6 +1,16 @@
 .scrollpaging {
-
+    display: block;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding: 6px 0;
+    border: 1px solid #ddd;
+    margin: 1em 0;
+}
+.scrollpaging:hover {
+    background-color: #e3e3e3;
 }
 .scrollpaging a.more {
-
+    display: block;
+    color: #333;
+    text-decoration: none;
 }
