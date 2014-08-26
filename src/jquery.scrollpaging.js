@@ -61,7 +61,7 @@
         },
 
         onLoading: function() {
-            var more = this.$ele.children('.' + this.more["class"]);
+            var more = this.$ele.children('.' + this.more.className);
             more.length && more.html(this.more.loading);
         },
 
@@ -69,9 +69,9 @@
             var _this = this;
             if (this.more.every || !this.hasMore || this.activeNum >= this.active) {
                 // generate more element
-                var more = this.$ele.children('.' + this.more["class"]);
+                var more = this.$ele.children('.' + this.more.className);
                 if (!more.length) {
-                    more = $('<div class="' + this.more["class"] + '"></div>');
+                    more = $('<div class="' + this.more.className + '"></div>');
                     this.$ele.append(more);
                 }
 
@@ -129,7 +129,7 @@
         more: {
             // 一直存在还是不主动触发以后再显示
             "every": true,
-            "class": "scrollpaging",
+            "className": "scrollpaging",
             "loading": "正在加载...",
             "finish": "没有数据了",
             "element": "<a class=\"more\" href=\"javascript:;\"></a>",
